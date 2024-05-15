@@ -59,4 +59,6 @@ docker-compose up -d
 
 ## Bonus
 - [X] Users can register using default Wordpress system 
-- [X] Users can search Movies and Actors by clieking on the Search Icon
+- [X] Users can search Movies and Actors by clicking on the Search Icon
+- [X] Big banner image is now displayed in the movie detail page
+
