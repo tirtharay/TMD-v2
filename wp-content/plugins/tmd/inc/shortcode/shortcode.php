@@ -590,3 +590,19 @@ class shortcode
         return $t1 - $t2;
     }
 }
+
+
+// Add this code to your theme's functions.php file or a custom plugin
+
+function custom_big_bnr_shortcode() {
+    // Assuming $this refers to an instance of your class where get_movies_banner() and getPosterPath() are defined
+    // Get the movie poster URL using getPosterPath() method
+    $posterUrl = $this->getPosterPath();
+
+    // Generate the HTML code with the background image style
+    $html = '<section class="elementor-section elementor-top-section elementor-element elementor-element-1152c5f elementor-section-height-min-height big-bnr elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="1152c5f" data-element_type="section" id="big-bnr" style="background-image: url(' . $posterUrl . ');">';
+    $html .= '</section>';
+
+    return $html;
+}
+add_shortcode('custom_big_bnr', 'custom_big_bnr_shortcode');

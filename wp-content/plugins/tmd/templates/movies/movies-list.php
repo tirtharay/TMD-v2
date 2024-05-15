@@ -28,7 +28,7 @@
         $short_desc = wp_trim_words($movies->overview, 10, '...');
 
         echo '<div class="movie">';
-        echo '<a href="#"><img src="' . $imgURL . '"></a>';
+        echo '<a class="movie-name" href="' . get_site_url() . '/' . $moviesDetailspage . '?mid=' . $movies->id . '"><img src="' . $imgURL . '"></a>';
         echo '<div class="movie-details">';
         echo '<a class="movie-name" href="' . get_site_url() . '/' . $moviesDetailspage . '?mid=' . $movies->id . '">' . $movies->original_title . '</a> <span class="genre">' . implode(',', $custgenre) . '</span>';
 
@@ -66,7 +66,7 @@ function getmoviespagination($total, $displayCount, $currentPage, $displayPageLi
             $queryString = '?' . $str[1];
         }
         $availablePage = ceil($total / $displayCount);
-        $pre_next_count = ceil(($displayPageList - 1) / 2); // count of nect and previos button 
+        $pre_next_count = ceil(($displayPageList - 1) / 2); // count of nect and previos button
         $pageStart = 1;
         $paginationHTML .= '<div class="paginaion-wrap">';
 
@@ -87,7 +87,7 @@ function getmoviespagination($total, $displayCount, $currentPage, $displayPageLi
 
 
 
-            $pageStart = $currentPage - $pre_next_count; //  Change the Loop start page 
+            $pageStart = $currentPage - $pre_next_count; //  Change the Loop start page
             $displayPageList = $currentPage + $pre_next_count;
         }
 

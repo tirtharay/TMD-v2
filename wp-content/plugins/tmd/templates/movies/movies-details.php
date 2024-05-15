@@ -21,7 +21,7 @@ class getMovieData
             $this->actorDetailspage = 'actor-detail'; // actor details page slug
             $this->defaultimage = 'https://via.placeholder.com/500x750.png';
             $this->moviesdata = $moviesdata;
-            $this->imageURL = 'https://image.tmdb.org/t/p/w500/';
+            $this->imageURL = 'https://image.tmdb.org/t/p/original/';
 
 
             $function = $atts['data'];

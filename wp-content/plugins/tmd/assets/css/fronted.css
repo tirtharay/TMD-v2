@@ -125,6 +125,9 @@
     font-weight: 700;
     display: block;
 }
+.movie-name:hover {
+    color: #c36;
+}
 .releasedate,
 .genre{
     color: #ffffffa6;

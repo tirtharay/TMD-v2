@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    loadOwl(); // load own carosle 
+    loadOwl(); // load own carosle
     $('body').on('change', '#filter-by-year,#filter-by-month', function() {
         var year = $('#filter-by-year').val();
         var month = $('#filter-by-month').val();
@@ -47,4 +47,21 @@ jQuery(document).ready(function($) {
             }
         })
     }
+});
+
+//Add backgrounf poster image option
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the image element with class "detail-img"
+    var imgElement = document.querySelector('.detail-img');
+
+    // Get the src attribute of the image
+    var imageUrl = imgElement.getAttribute('src');
+
+    // Get the section element with class "big-bnr"
+    var sectionElement = document.querySelector('.big-bnr');
+
+    // Apply the background image style to the section element
+    sectionElement.style.backgroundImage = 'url("' + imageUrl + '")';
+    sectionElement.style.backgroundPosition = '0px -760px';
+    sectionElement.style.backgroundSize = 'cover';
 });
