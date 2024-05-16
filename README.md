@@ -1,8 +1,8 @@
 # TMD V2
 
-The objective of this challenge is to implement a mini site using Wordpress 6.3 or higher. The site should contain information about movies and actors. The site 
-shows information about the latest and most popular movies and actors, by receiving data from a third party API. The API I used is from 
-https://developers.themoviedb.org/3 
+The objective of this challenge is to implement a mini site using Wordpress 6.3 or higher. The site should contain information about movies and actors. The site
+shows information about the latest and most popular movies and actors, by receiving data from a third party API. The API I used is from
+https://developers.themoviedb.org/3
 ✨Magic ✨
 
 ## Features
@@ -12,16 +12,15 @@ https://developers.themoviedb.org/3
 git clone https://github.com/tirtharay/TMD-v2.git
 ```
 - Make sure you have Docker and Composer installed.
-[Install](https://docs.docker.com/engine/install/) - Docker
-[Install](https://getcomposer.org/download/) - Composer
+[how to install](https://github.com/tirtharay/TMD-v2/blob/master/docs/install-docker.md) - Docker
+[how to install](https://github.com/tirtharay/TMD-v2/blob/master/docs/install-composer.md) - Composer
 - Navigate to the cloned repository folder.
 ```sh
 cd tmd ( for example)
 ```
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
 
 ## Running Your WordPress Instance
+- Open a Terminal (or Command Prompt/PowerShell on Windows) and navigate to the directory containing docker-compose.yml file (if you haven't already).
 - Execute the following command to start your WordPress instance
 ```sh
 docker-compose up -d
@@ -58,7 +57,7 @@ docker-compose up -d
 - [X] Actors are filterable by name and movie..
 
 ## Bonus
-- [X] Users can register using default Wordpress system 
+- [X] Users can register using default Wordpress system
 - [X] Users can search Movies and Actors by clicking on the Search Icon
 - [X] Big banner image is now displayed in the movie detail page
 

@@ -4,11 +4,11 @@
  * Plugin Name: TMB
  * Description: A Movies data system
  * Version: 1.0
- * Author: suasecretariaremota
- * Author URI: http://www.suasecretariaremota.com
+ * Author: Tirtha Ray
+ * Author URI: http://www.tirtharay.com.br
  */
 
-class suasecretariaremota
+class tmd
 {
 
     public function __construct()
@@ -17,14 +17,14 @@ class suasecretariaremota
         add_action('admin_enqueue_scripts', array($this, 'enqueueAdmin'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue'));
 
-        // // Load the all short code 
+        // // Load the all short code
         require_once MOVIESPATH . '/inc/shortcode/shortcode.php';
         new shortcode();
 
         add_filter('admin_init', array(&$this, 'register_fields'));
         add_action('plugin_loaded', array($this, 'ajax_loader'));
 
-        add_action('wp_head', array($this, 'movies_loader')); // loader for all the events 
+        add_action('wp_head', array($this, 'movies_loader')); // loader for all the events
     }
 
     public function enqueueAdmin()
@@ -46,7 +46,7 @@ class suasecretariaremota
     public function ajax_loader()
     {
         // Ajax Hendler
-        require_once MOVIESPATH . '/inc/ajax/functions.php'; // ajax functions 
+        require_once MOVIESPATH . '/inc/ajax/functions.php'; // ajax functions
         require_once MOVIESPATH . '/inc/ajax/ajax.php'; // ajax hooks
 
 
@@ -77,4 +77,4 @@ class suasecretariaremota
     }
 }
 
-new suasecretariaremota();
+new tmd();
